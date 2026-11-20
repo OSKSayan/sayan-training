@@ -12,19 +12,21 @@
 @media(max-width:390px){main{padding-left:12px;padding-right:12px}.prescription{font-size:11px;padding:5px 6px}.day .desc{font-size:8px}.timer-controls .duration{padding:6px;font-size:11px}.timer{gap:4px}.timer-main{padding:10px;min-width:68px}.header-date{display:none}.rail{grid-template-columns:1fr}.rail .note{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media print{aside,.timer,.week,.tech-btn,.ex-bottom,header,.phase,.rail,footer{display:none}main{margin:0;padding:0}body,.exercise,.hero{background:white;color:black}.layout{display:block}.exercise{break-inside:avoid}.muscle{color:#444}}
+.exercise-rest{font-size:13px;color:var(--muted);margin-top:7px}.rest-btn{background:none;border:1px solid var(--line);color:var(--muted);border-radius:7px;padding:6px 9px;font-size:13px}.ex-bottom{justify-content:flex-start;gap:12px}.ex-bottom .tech-btn{margin-left:auto}.hero-meta{flex-wrap:wrap}.hero-number{display:none}.day .desc{font-size:13px}.technique ol,.rules ul,.note p,.warmup li,.small{font-size:14px}body{font-size:16px}.hero p{font-size:14px}.set{min-width:36px;min-height:36px}.week{overflow-x:auto;grid-template-columns:repeat(7,minmax(78px,1fr));padding-bottom:8px}.phase{max-width:260px}.phase select{font-size:14px}select{appearance:none;padding-right:29px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a3ab9d' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center}
+@media(max-width:800px){.phase{max-width:none}.day .desc{font-size:12px}.week{grid-template-columns:repeat(7,78px)}.hero p{max-width:100%;font-size:14px}.hero-meta{font-size:12px}.ex-top{grid-template-columns:22px minmax(0,1fr);gap:8px}.prescription{grid-column:2;justify-self:start;font-size:14px}.ex-bottom{padding-left:16px;gap:10px}.set-group{flex-wrap:wrap}.exercise h3{font-size:17px}.tech-btn{font-size:14px}.timer-label{max-width:108px;line-height:1.2}.timer{gap:5px}.timer-main{padding:10px;min-width:65px}.timer-controls{gap:3px}.duration{padding:6px;font-size:12px}.intro h1{font-size:32px}}
 </style>
 </head>
 <body>
-<aside><div class="brand"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 7v10M3 9v6M18 7v10M21 9v6M6 12h12"/></svg><div>SAYAN<small>TRAINING CLUB</small></div></div><p class="side-label">Твой ритм</p><a class="side-link active" href="#schedule">▦ <span>Моя неделя</span></a><a class="side-link" href="#rules">↗ <span>Как прогрессировать</span></a><div class="side-footer"><div class="avatar">S</div><strong>Твой тренировочный план</strong>Возвращение в форму</div></aside>
+<aside><div class="brand"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 7v10M3 9v6M18 7v10M21 9v6M6 12h12"/></svg><div>SAYAN<small>TRAINING CLUB</small></div></div><p class="side-label">Твой ритм</p><a class="side-link active" href="#schedule">▦ <span>Моя неделя</span></a><a class="side-link" href="#rules">↗ <span>Как прогрессировать</span></a><div class="side-footer"><div class="avatar">S</div><strong>Твой тренировочный план</strong>Верх / низ · рабочая программа</div></aside>
 <main id="schedule">
-<header><span class="mobile-brand">SAYAN / TRAINING</span><span class="header-date" id="today"></span><span class="pill"><i></i>3 тренировки в неделю</span></header>
-<div class="intro"><div><span class="eyebrow">Твоя неделя. Твой темп.</span><h1>Сильнее с каждой неделей.</h1><p class="muted">Выбери день, открой технику и тренируйся по плану.</p></div><label class="phase">ЭТАП ВОЗВРАЩЕНИЯ<select id="phase"><option value="start">Первые 2 недели</option><option value="regular">С 3-й недели</option></select></label></div>
+<header><span class="mobile-brand">SAYAN / TRAINING</span><span class="header-date" id="today"></span><span class="pill"><i></i>4 тренировки в неделю</span></header>
+<div class="intro"><div><span class="eyebrow">Твоя неделя. Твой темп.</span><h1>Сильнее с каждой неделей.</h1><p class="muted">Выбери день, открой технику и тренируйся по плану.</p></div><label class="phase">РЕЖИМ НЕДЕЛИ<select id="phase"><option value="regular">Рабочая программа</option><option value="deload">Облегчённая неделя</option></select></label></div>
 <nav class="week" aria-label="Дни недели" id="week"></nav>
-<div class="layout"><div><section class="hero" aria-labelledby="day-title"><span class="eyebrow" id="day-subtitle"></span><h2 id="day-title"></h2><p id="day-description"></p><div class="hero-meta" id="hero-meta"></div><span class="hero-number" id="hero-number" aria-hidden="true"></span></section><section id="workout" aria-labelledby="exercise-title"></section><details class="rules" id="rules"><summary>Как тренироваться и повышать нагрузку</summary><ul><li>Перед залом: 5–10 минут лёгкой разминки. Перед первым упражнением на каждую группу — 1–2 лёгких разминочных подхода. В таблице указаны только рабочие подходы.</li><li>Первые две недели оставляй 3–4 повторения в запасе; затем около 2–3. Не возвращай прежние веса сразу и не работай до отказа.</li><li>Когда достигнешь верхней границы повторений во всех подходах с хорошей техникой и запасом, добавь минимальную ступень веса.</li><li>После тяжёлой смены или военки снизь нагрузку. Пропущенные подходы не нужно отрабатывать.</li><li>При острой боли останови упражнение. Старые травмы могут потребовать замены упражнений с тренером или врачом.</li><li>Видео показывает конкретную модель тренажёра. Если твой тренажёр другой, попроси дежурного тренера помочь с настройкой.</li></ul></details></div>
+<div class="layout"><div><section class="hero" aria-labelledby="day-title"><span class="eyebrow" id="day-subtitle"></span><h2 id="day-title"></h2><p id="day-description"></p><div class="hero-meta" id="hero-meta"></div><span class="hero-number" id="hero-number" aria-hidden="true"></span></section><section id="workout" aria-labelledby="exercise-title"></section><details class="rules" id="rules"><summary>Как тренироваться и повышать нагрузку</summary><ul><li>Перед залом: 5–10 минут лёгкой разминки. Перед первым упражнением на каждую группу — 1–2 лёгких разминочных подхода. В таблице указаны только рабочие подходы.</li><li>Рабочая программа: 2–3 повторения в запасе; в четверг — 3–4. Две недели в зале — основание постепенно увеличить объём, но не резко возвращать старые веса. Отказ не нужен.</li><li>Когда достигнешь верхней границы повторений во всех подходах с хорошей техникой и нужным запасом на двух тренировках этого дня подряд, добавь минимальную ступень веса. Затем снова двигайся от нижней границы диапазона. Например: 3 × 8–12 → 12/12/12 → минимальная прибавка.</li><li>После тяжёлой смены или военки снизь нагрузку. Пропущенные подходы не нужно отрабатывать.</li><li>При острой боли останови упражнение. Старые травмы могут потребовать замены упражнений с тренером или врачом.</li><li>Видео показывает конкретную модель тренажёра. Если твой тренажёр другой, попроси дежурного тренера помочь с настройкой.</li><li>Первую неделю четырёхдневного графика не увеличивай одновременно и веса, и подходы. Рабочие веса записываются отдельно для каждого дня: лёгкий четверг не заменяет вес понедельника.</li><li>При накопившейся усталости выбери «Облегчённая неделя»: на один подход меньше в каждом упражнении, меньший вес и запас 4–5 повторов. Если усталость выраженная, пропусти тренировку.</li><li>После 4–6 недель оцени прогресс и восстановление. Этот план — следующий этап после перерыва, а не возврат к прежней спортивной нагрузке.</li></ul><p class="small">Общие принципы: <a href="https://acsm.org/resistance-training-guidelines-update-2026/" target="_blank" rel="noopener">рекомендации ACSM по силовым тренировкам</a>. Расписание и объём адаптированы под работу и военку.</p></details></div>
 <div class="rail"><section class="panel" id="progress-panel"><h3>Твой прогресс за тренировку</h3><div class="progress-top"><strong id="percent">0%</strong><span id="set-count">0 / 10 подходов</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="small">Нажимай на номер выполненного подхода.</p><button class="reset" id="reset">Сбросить отметки дня</button><p id="storage-status" class="saving-status" role="status"></p></section><section class="panel"><h3>Перед первым подходом</h3><ol class="warmup"><li><b>01</b><div><strong>Разогрейся</strong>5–10 минут в спокойном темпе.</div></li><li><b>02</b><div><strong>Настрой тренажёр</strong>Положение сиденья и валиков — под себя.</div></li><li><b>03</b><div><strong>Начни с лёгкого веса</strong>Разминочные подходы не отмечай как рабочие.</div></li></ol></section><section class="panel note"><p class="eyebrow">Восстановление — часть плана</p><p id="day-note"></p></section></div></div>
 <footer><span>Постоянство важнее рекордов.</span><span>Техника и видео: <a href="https://musclewiki.com" target="_blank" rel="noopener">MuscleWiki ↗</a> · <a href="https://github.com/OSKSayan/sayan-training" target="_blank" rel="noopener">GitHub</a></span><span>Вес и отметки сохраняются только в этом браузере. Видео требуют интернета.</span></footer>
 </main>
-<div class="timer" aria-label="Таймер отдыха"><div><div class="timer-label" id="timer-label">ОТДЫХ МЕЖДУ ПОДХОДАМИ</div><div id="clock" role="timer" aria-label="Осталось времени">02:00</div></div><div class="timer-controls"><button class="duration" data-seconds="60" aria-pressed="false">60 с</button><button class="duration" data-seconds="90" aria-pressed="false">90 с</button><button class="duration" data-seconds="120" aria-pressed="true">120 с</button><button class="timer-main" id="timer-toggle">Старт</button><button class="timer-reset" id="timer-reset" aria-label="Сбросить таймер">↻</button></div></div><div id="toast" role="status" hidden></div>
+<div class="timer" aria-label="Таймер отдыха"><div><div class="timer-label" id="timer-label">ОТДЫХ МЕЖДУ ПОДХОДАМИ</div><div id="clock" role="timer" aria-label="Осталось времени">02:00</div></div><div class="timer-controls"><button class="duration" data-seconds="60" aria-pressed="false">60 с</button><button class="duration" data-seconds="120" aria-pressed="true">120 с</button><button class="duration" data-seconds="180" aria-pressed="false">180 с</button><button class="timer-main" id="timer-toggle">Старт</button><button class="timer-reset" id="timer-reset" aria-label="Сбросить таймер">↻</button></div></div><div id="toast" role="status" hidden></div>
 <script>
 'use strict';
 const mediaBase='videos/';
@@ -43,25 +45,242 @@ const exercises={
  triceps:{name:'Разгибание рук с канатом',muscle:'Трицепс',reps:'10–15',file:'male-Cables-cable-push-down-side.mp4',slug:'cable-rope-pushdown',steps:['Закрепи канат на верхнем блоке. Возьмись за концы, слегка наклони корпус и прижми локти к бокам.','Разогни руки вниз за счёт движения в локтях. Плечи и корпус удерживай неподвижно.','Плавно согни локти и верни канат вверх без удара грузов.'],cue:'Если приходится наваливаться всем телом — уменьши вес.'}
 };
 const days=[
- {short:'Пн',name:'Понедельник',label:'Ноги',title:'Ноги + пресс',type:'training',time:'45–55 мин',description:'Основная нагрузка на ноги — в начале недели. До рабочих выходных остаётся время на восстановление.',note:'После двух рабочих смен оцени состояние ног. Если они ещё тяжёлые, уменьши вес или объём. Не пытайся побить рекорды.',items:['legpress','legcurl','hip','calf','crunch']},
- {short:'Вт',name:'Вторник',label:'Отдых',title:'День восстановления',type:'rest',description:'Выдохни и дай мышцам восстановиться. Спокойная прогулка — по желанию.',note:'Восстановление помогает следующей тренировке. Сегодня нет обязательных подходов.',next:3},
- {short:'Ср',name:'Среда',label:'Военка',title:'Военная кафедра',type:'rest',description:'Военка уже забирает силы. Зал сегодня не запланирован: после занятий — еда, отдых и сон.',note:'Усталость после длинного дня — повод восстановиться. Не нужно добавлять тренировку через силу.',next:3},
- {short:'Чт',name:'Четверг',label:'Всё тело',title:'Всё тело · лёгкие ноги',type:'training',time:'45–60 мин',description:'Грудь, спина и плечи. Ноги — небольшая дополнительная нагрузка, без тяжёлой крепатуры перед сменами.',note:'Первые две недели — по одному лёгкому подходу на ноги, с запасом 3–4 повторения. Если ноги болят на работе, временно убери эти два упражнения.',items:['legpress','legcurl','bench','pulldown','lateral']},
- {short:'Пт',name:'Пятница',label:'Верх тела',title:'Верх тела',type:'training',time:'45–60 мин',description:'Грудь, спина, плечи и руки. Ноги сегодня отдыхают перед рабочими выходными.',note:'После четверга часть мышц верха ещё восстанавливается. Не работай до отказа. Если есть выраженная болезненность или падает техника, сократи объём либо пропусти упражнение.',items:['chest','row','pulldown','lateral','curl','triceps']},
- {short:'Сб',name:'Суббота',label:'Работа',title:'Рабочая смена',type:'rest',description:'Работа на ногах — тоже нагрузка. Дополнительную тренировку ног сегодня не добавляем.',note:'По возможности делай короткие перерывы, пей воду и дай ногам отдохнуть после смены.',next:0},
- {short:'Вс',name:'Воскресенье',label:'Работа',title:'Работа + восстановление',type:'rest',description:'Сохрани силы на новую неделю. Зал сегодня не запланирован.',note:'Перед понедельником оцени усталость после смен. При необходимости следующая тренировка ног будет легче.',next:0}
+  {
+    "short": "Пн",
+    "name": "Понедельник",
+    "label": "Низ A",
+    "title": "Низ A · ноги + пресс",
+    "type": "training",
+    "time": "45–60 мин",
+    "description": "Основная тренировка ног: жим, задняя поверхность бедра, ягодицы и икры. Начни с разминки и выполняй рабочие подходы с запасом 2–3 повторения.",
+    "note": "После рабочих выходных оцени усталость ног. Если она выраженная, выбери облегчённую неделю или снизь вес. Не повышай вес только потому, что началась третья неделя.",
+    "items": [
+      "legpress",
+      "legcurl",
+      "hip",
+      "calf",
+      "crunch"
+    ],
+    "plan": {
+      "legpress": [
+        3,
+        "8–12",
+        180
+      ],
+      "legcurl": [
+        3,
+        "10–15",
+        120
+      ],
+      "hip": [
+        2,
+        "10–12",
+        120
+      ],
+      "calf": [
+        2,
+        "12–20",
+        90
+      ],
+      "crunch": [
+        2,
+        "12–20",
+        90
+      ]
+    }
+  },
+  {
+    "short": "Вт",
+    "name": "Вторник",
+    "label": "Верх A",
+    "title": "Верх A · грудь и спина",
+    "type": "training",
+    "time": "55–70 мин",
+    "description": "Жим гантелей, две тяги, плечи и руки. Следи за техникой и оставляй 2–3 повторения в запасе. Основные упражнения — в начале тренировки.",
+    "note": "Первую неделю нового графика сохраняй освоенные веса. Сначала привыкни к четырём тренировкам, затем повышай нагрузку по результатам подходов.",
+    "items": [
+      "bench",
+      "row",
+      "pulldown",
+      "lateral",
+      "curl",
+      "triceps"
+    ],
+    "plan": {
+      "bench": [
+        3,
+        "8–12",
+        180
+      ],
+      "row": [
+        3,
+        "8–12",
+        150
+      ],
+      "pulldown": [
+        2,
+        "10–12",
+        120
+      ],
+      "lateral": [
+        2,
+        "12–20",
+        90
+      ],
+      "curl": [
+        2,
+        "10–15",
+        90
+      ],
+      "triceps": [
+        2,
+        "10–15",
+        90
+      ]
+    }
+  },
+  {
+    "short": "Ср",
+    "name": "Среда",
+    "label": "Военка",
+    "title": "Военка · без зала",
+    "type": "rest",
+    "description": "Военная кафедра уже создаёт нагрузку. После занятий запланированы еда, отдых и сон, без дополнительной силовой тренировки.",
+    "note": "Не догоняй пропущенные упражнения после военки. Если усталость сохраняется к четвергу, сократи следующую тренировку.",
+    "next": 3
+  },
+  {
+    "short": "Чт",
+    "name": "Четверг",
+    "label": "Низ B",
+    "title": "Низ B · умеренная нагрузка",
+    "type": "training",
+    "time": "40–55 мин",
+    "description": "Вторая тренировка ног с меньшим объёмом, чем в понедельник. Работай с запасом 3–4 повторения, чтобы сохранить силы на выходные смены.",
+    "note": "Четверг — не день рекордов. Если крепатура мешает ходить на работе, сократи по одному подходу на ноги или временно пропусти эту тренировку. Даже небольшой объём может вызвать болезненность.",
+    "items": [
+      "legpress",
+      "legcurl",
+      "hip",
+      "calf",
+      "crunch"
+    ],
+    "plan": {
+      "legpress": [
+        2,
+        "12–15",
+        150
+      ],
+      "legcurl": [
+        2,
+        "12–15",
+        120
+      ],
+      "hip": [
+        2,
+        "12–15",
+        120
+      ],
+      "calf": [
+        2,
+        "15–20",
+        90
+      ],
+      "crunch": [
+        2,
+        "12–20",
+        90
+      ]
+    }
+  },
+  {
+    "short": "Пт",
+    "name": "Пятница",
+    "label": "Верх B",
+    "title": "Верх B · спина и плечи",
+    "type": "training",
+    "time": "55–70 мин",
+    "description": "Начни с тяги верхнего блока, затем жим в тренажёре и тяга с опорой. Заверши плечами и руками. Ноги сегодня отдыхают перед рабочими сменами.",
+    "note": "Между тренировками верха есть два дня. Оставляй 2–3 повторения в запасе и повышай вес только при уверенной технике.",
+    "items": [
+      "pulldown",
+      "chest",
+      "row",
+      "lateral",
+      "curl",
+      "triceps"
+    ],
+    "plan": {
+      "pulldown": [
+        3,
+        "8–12",
+        150
+      ],
+      "chest": [
+        3,
+        "8–12",
+        180
+      ],
+      "row": [
+        2,
+        "10–15",
+        120
+      ],
+      "lateral": [
+        2,
+        "12–20",
+        90
+      ],
+      "curl": [
+        2,
+        "10–15",
+        90
+      ],
+      "triceps": [
+        2,
+        "10–15",
+        90
+      ]
+    }
+  },
+  {
+    "short": "Сб",
+    "name": "Суббота",
+    "label": "Работа",
+    "title": "Рабочая смена · без зала",
+    "type": "rest",
+    "description": "Работа официантом — длительная нагрузка на ноги. Зал не запланирован. По возможности делай короткие перерывы и отдыхай после смены.",
+    "note": "Оцени, насколько четверговая тренировка влияет на работу. Если ноги сильно болят, уменьши её объём в следующую неделю.",
+    "next": 0
+  },
+  {
+    "short": "Вс",
+    "name": "Воскресенье",
+    "label": "Работа",
+    "title": "Работа + восстановление",
+    "type": "rest",
+    "description": "Заверши неделю без дополнительной тренировки. Подготовься к понедельнику: восстановление, еда и достаточный сон.",
+    "note": "Если после двух смен ноги не восстановились, в понедельник снизь нагрузку. График помогает планировать, а самочувствие определяет объём.",
+    "next": 0
+  }
 ];
 const $=s=>document.querySelector(s);let storageOK=true;
 function read(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}}
 function save(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch{storageOK=false;$('#storage-status').textContent='Браузер не разрешает сохранение. Отметки доступны до закрытия страницы.'}}
-let phase=read('sayan-phase','start');if(!['start','regular'].includes(phase))phase='start';$('#phase').value=phase;
+let phase=read('sayan-upperlower-phase','regular');if(!['regular','deload'].includes(phase))phase='regular';$('#phase').value=phase;
 const now=new Date();const localDate=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const monday=new Date(now);monday.setDate(now.getDate()-(now.getDay()+6)%7);const weekKey=localDate(monday);
 let selected=(now.getDay()+6)%7;const hash=Number(location.hash.replace('#day-',''));if(location.hash.startsWith('#day-')&&Number.isInteger(hash)&&hash>=0&&hash<7)selected=hash;
-let weights=read('sayan-weights',{});if(!weights||typeof weights!=='object'||Array.isArray(weights))weights={};let completed=read('sayan-week-'+weekKey,{});if(!completed||typeof completed!=='object'||Array.isArray(completed))completed={};
+let weights=read('sayan-weights',{});if(!weights||typeof weights!=='object'||Array.isArray(weights))weights={};let completed=read('sayan-upperlower-v1-week-'+weekKey,{});if(!completed||typeof completed!=='object'||Array.isArray(completed))completed={};
 $('#today').textContent=new Intl.DateTimeFormat('ru-RU',{weekday:'long',day:'numeric',month:'long'}).format(now);
 const playIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z" fill="currentColor" stroke="none"/></svg>';
-function setsFor(id){return selected===3&&['legpress','legcurl'].includes(id)&&phase==='start'?1:2}
+function prescriptionFor(id){return days[selected].plan[id]}
+function setsFor(id){const count=prescriptionFor(id)[0];return phase==='deload'?Math.max(1,count-1):count}
+function repsFor(id){return prescriptionFor(id)[1]}
+function restFor(id){return prescriptionFor(id)[2]}
+function effortFor(){return phase==='deload'?'запас 4–5 повторов':selected===3?'запас 3–4 повтора':'запас 2–3 повтора'}
+function weightKey(id){return selected+':'+id}
+function weightFor(id){return weights[weightKey(id)]??weights[id]??''}
 function completionKey(id,set){return `${selected}:${id}:${set}`}
 function escapeAttr(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function render(){
@@ -69,19 +288,20 @@ function render(){
  $('#week').innerHTML=days.map((d,i)=>`<button class="day ${d.type}" data-day="${i}" aria-label="${d.name}: ${d.label}" aria-pressed="${selected===i}"><span class="weekday">${d.short}${i===(now.getDay()+6)%7?'<small class="today-label">сегодня</small>':''}</span><span class="desc"><i class="dot"></i>${d.label}</span></button>`).join('');
  const day=days[selected];$('#day-subtitle').textContent=day.name+' / '+(day.type==='training'?'тренировочный день':'без зала');$('#day-title').textContent=day.title;$('#day-description').textContent=day.description;$('#hero-number').textContent=String(selected+1).padStart(2,'0');$('#day-note').textContent=day.note;
  $('#progress-panel').hidden=day.type!=='training';
- $('#hero-meta').innerHTML=day.items?`<span>◷ ${day.time}</span><span>↗ ${day.items.length} упражнений</span><span>◎ ${phase==='start'?'запас 3–4 повтора':'запас 2–3 повтора'}</span>`:'<span>◎ Восстановление и обычная активность</span>';
- if(day.items){$('#workout').innerHTML=`<div class="section-head"><h2 id="exercise-title">План тренировки</h2><span>Рабочие подходы</span></div>`+day.items.map((id,index)=>{const e=exercises[id],count=setsFor(id);return `<article class="exercise"><div class="ex-top"><span class="num">${String(index+1).padStart(2,'0')}</span><div><h3>${e.name}</h3><p class="muscle">${e.muscle}</p></div><span class="prescription">${count} × ${e.reps}</span></div><div class="ex-bottom"><div class="set-group" role="group" aria-label="Подходы: ${e.name}">${Array.from({length:count},(_,i)=>`<button class="set" data-id="${id}" data-set="${i}" aria-label="${e.name}, подход ${i+1}" aria-pressed="${!!completed[completionKey(id,i)]}">${completed[completionKey(id,i)]?'✓':i+1}</button>`).join('')}<label class="weight"><input type="number" inputmode="decimal" min="0" max="1500" step="0.5" placeholder="—" value="${escapeAttr(weights[id]??'')}" data-weight="${id}" aria-label="${e.name}: рабочий вес в килограммах">кг</label></div><button class="tech-btn" data-tech="${id}" aria-expanded="false" aria-controls="tech-${id}">${playIcon}Техника</button></div><div class="technique" id="tech-${id}" hidden><div class="video-wrap"><video controls playsinline muted loop preload="none" data-src="${mediaBase+e.file}" aria-label="Демонстрация: ${e.name}"></video><p class="video-error" hidden>Видео не загрузилось. Открой оригинал по ссылке ниже.</p></div><div class="source"><span>Видео: MuscleWiki · без озвучки</span><a href="${mediaBase+e.file}" download>Скачать видео ↓</a><a href="https://musclewiki.com/exercise/${e.slug}" target="_blank" rel="noopener">Оригинал и техника ↗</a></div><ol>${e.steps.map(s=>`<li>${s}</li>`).join('')}</ol><p class="cue">${e.cue}</p></div></article>`}).join('');updateProgress();}
+ $('#hero-meta').innerHTML=day.items?`<span>◷ ${day.time}</span><span>↗ ${day.items.length} упражнений</span><span>◎ ${effortFor()}</span>`:'<span>◎ Восстановление и обычная активность</span>';
+ if(day.items){$('#workout').innerHTML=`<div class="section-head"><h2 id="exercise-title">План тренировки</h2><span>Рабочие подходы</span></div>`+day.items.map((id,index)=>{const e=exercises[id],count=setsFor(id);return `<article class="exercise"><div class="ex-top"><span class="num">${String(index+1).padStart(2,'0')}</span><div><h3>${e.name}</h3><p class="muscle">${e.muscle}</p><p class="exercise-rest">Отдых ${restFor(id)/60 % 1===0?restFor(id)/60+' мин':Math.floor(restFor(id)/60)+' мин '+restFor(id)%60+' с'} · ${['bench','lateral','curl'].includes(id)?'вес одной гантели':id==='crunch'?'сначала без отягощения':'вес тренажёра'}</p></div><span class="prescription">${count} × ${repsFor(id)}</span></div><div class="ex-bottom"><div class="set-group" role="group" aria-label="Подходы: ${e.name}">${Array.from({length:count},(_,i)=>`<button class="set" data-id="${id}" data-set="${i}" aria-label="${e.name}, подход ${i+1}" aria-pressed="${!!completed[completionKey(id,i)]}">${completed[completionKey(id,i)]?'✓':i+1}</button>`).join('')}<label class="weight"><input type="number" inputmode="decimal" min="0" max="1500" step="0.5" placeholder="—" value="${escapeAttr(weightFor(id))}" data-weight="${id}" aria-label="${e.name}: рабочий вес в килограммах">кг</label></div><button class="rest-btn" data-rest="${restFor(id)}" aria-label="Запустить отдых после упражнения ${e.name}">Отдых ${restFor(id)} с</button><button class="tech-btn" data-tech="${id}" aria-expanded="false" aria-controls="tech-${id}">${playIcon}Техника</button></div><div class="technique" id="tech-${id}" hidden><div class="video-wrap"><video controls playsinline muted loop preload="none" data-src="${mediaBase+e.file}" aria-label="Демонстрация: ${e.name}"></video><p class="video-error" hidden>Видео не загрузилось. Открой оригинал по ссылке ниже.</p></div><div class="source"><span>Видео: MuscleWiki · без озвучки</span><a href="${mediaBase+e.file}" download>Скачать видео ↓</a><a href="https://musclewiki.com/exercise/${e.slug}" target="_blank" rel="noopener">Оригинал и техника ↗</a></div><ol>${e.steps.map(s=>`<li>${s}</li>`).join('')}</ol><p class="cue">${e.cue}</p></div></article>`}).join('');updateProgress();}
  else{$('#workout').innerHTML=`<section class="rest-state"><span class="rest-icon" aria-hidden="true">◎</span><h3 id="exercise-title">Сегодня восстанавливаемся.</h3><p>Не нужно догонять пропущенные упражнения. Следующая тренировка: <strong>${days[day.next].name.toLowerCase()} — ${days[day.next].title.toLowerCase()}</strong>.</p><button class="next" data-day="${day.next}">Посмотреть следующую тренировку →</button></section>`}
 }
 function updateProgress(){const ids=days[selected].items;if(!ids)return;let total=0,done=0;ids.forEach(id=>{for(let i=0;i<setsFor(id);i++){total++;if(completed[completionKey(id,i)])done++}});let percent=Math.round(done/total*100);$('#percent').textContent=percent+'%';$('#set-count').textContent=`${done} / ${total} подходов`;$('#progress-fill').style.width=percent+'%'}
 document.addEventListener('click',event=>{
  const dayButton=event.target.closest('[data-day]');if(dayButton){selected=Number(dayButton.dataset.day);history.replaceState(null,'','#day-'+selected);render();return}
- const set=event.target.closest('[data-set]');if(set){const key=completionKey(set.dataset.id,set.dataset.set);completed[key]=!completed[key];save('sayan-week-'+weekKey,completed);set.setAttribute('aria-pressed',String(completed[key]));set.textContent=completed[key]?'✓':Number(set.dataset.set)+1;updateProgress();return}
+ const set=event.target.closest('[data-set]');if(set){const key=completionKey(set.dataset.id,set.dataset.set);completed[key]=!completed[key];save('sayan-upperlower-v1-week-'+weekKey,completed);set.setAttribute('aria-pressed',String(completed[key]));set.textContent=completed[key]?'✓':Number(set.dataset.set)+1;updateProgress();return}
+ const rest=event.target.closest('[data-rest]');if(rest){duration=Number(rest.dataset.rest);document.querySelectorAll('[data-seconds]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.seconds)===duration)));resetTimer();deadline=Date.now()+duration*1000;running=true;$('#timer-label').textContent='ВОССТАНАВЛИВАЙ ДЫХАНИЕ';interval=setInterval(tick,250);showClock();return}
  const technique=event.target.closest('[data-tech]');if(technique){const panel=$('#tech-'+technique.dataset.tech),opening=panel.hidden;panel.hidden=!opening;technique.setAttribute('aria-expanded',String(opening));const video=panel.querySelector('video');if(opening){if(!video.src){video.src=video.dataset.src;video.addEventListener('error',()=>{panel.querySelector('.video-error').hidden=false},{once:true})}video.play().catch(()=>{});}else video.pause();}
 });
-document.addEventListener('input',event=>{if(event.target.matches('[data-weight]')){const value=event.target.value;if(value!==''&&(!Number.isFinite(Number(value))||Number(value)<0||Number(value)>1500)){event.target.value=weights[event.target.dataset.weight]??'';return}weights[event.target.dataset.weight]=value;save('sayan-weights',weights)} });
-$('#phase').addEventListener('change',()=>{phase=$('#phase').value;save('sayan-phase',phase);render()});
-$('#reset').addEventListener('click',()=>{Object.keys(completed).filter(k=>k.startsWith(selected+':')).forEach(k=>delete completed[k]);save('sayan-week-'+weekKey,completed);render();toast('Отметки этого дня сброшены. Рабочие веса сохранены.')});
+document.addEventListener('input',event=>{if(event.target.matches('[data-weight]')){const value=event.target.value;if(value!==''&&(!Number.isFinite(Number(value))||Number(value)<0||Number(value)>1500)){event.target.value=weightFor(event.target.dataset.weight);return}weights[weightKey(event.target.dataset.weight)]=value;save('sayan-weights',weights)} });
+$('#phase').addEventListener('change',()=>{phase=$('#phase').value;save('sayan-upperlower-phase',phase);render()});
+$('#reset').addEventListener('click',()=>{Object.keys(completed).filter(k=>k.startsWith(selected+':')).forEach(k=>delete completed[k]);save('sayan-upperlower-v1-week-'+weekKey,completed);render();toast('Отметки этого дня сброшены. Рабочие веса сохранены.')});
 let toastTimeout;function toast(text){$('#toast').textContent=text;$('#toast').hidden=false;clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>$('#toast').hidden=true,4500)}
 let duration=120,remaining=120,running=false,deadline=0,interval;
 function showClock(){const seconds=Math.max(0,Math.ceil(remaining));$('#clock').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');$('#timer-toggle').textContent=running?'Пауза':remaining===0?'Ещё раз':'Старт'}
@@ -93,3 +313,4 @@ render();
 </script>
 </body>
 </html>
+
